@@ -261,7 +261,7 @@ elif selected == 'Analysis':
 hide = """
     <style>
     footer {visibility: hidden;}
-    # header {visibility: hidden;}
+    header {visibility: hidden;}
     </style>
     """
 st.markdown(hide,unsafe_allow_html = True)
