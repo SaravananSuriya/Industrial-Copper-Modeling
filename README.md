@@ -4,6 +4,8 @@
 
 **Skills take away From This Project :** Python scripting, Data Preprocessing, EDA, Streamlit.
 
+**Linkedin URL :** https://www.linkedin.com/in/saravanan-b-241468269/details/projects/
+
 **Domain :** Manufacturing
 
 **Data Set :** [Data Link](https://docs.google.com/spreadsheets/d/18eR6DBe5TMWU9FnIewaGtsepDbV4BOyr/edit#gid=462557918)
