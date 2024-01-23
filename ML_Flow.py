@@ -41,14 +41,6 @@ def randomforest():
 
         train_MAE = mean_absolute_error(y_train_pred, y_train)
         test_MAE = mean_absolute_error(y_test_pred, y_test)
-
-        #   train_MSE = mean_squared_error(y_train_pred, y_train)
-        #   test_MSE = mean_squared_error(y_test_pred, y_test)
-
-        # Train_RMSE = mean_squared_error(y_train_pred, y_train)
-        # Test_RMSE = mean_squared_error(y_test_pred, y_test)
-        # train_RMSE = sqrt(Train_RMSE)
-        # test_RMSE = sqrt(Test_RMSE)
         
         train_MAPE = mean_absolute_percentage_error(y_train_pred, y_train)
         test_MAPE = mean_absolute_percentage_error(y_test_pred, y_test)
@@ -60,12 +52,6 @@ def randomforest():
 
             mlflow.log_metric('train_MeanAbsoluteError', train_MAE)
             mlflow.log_metric('test_MeanAbsoluteError', test_MAE)
-
-            # mlflow.log_metric('train_MeanSquaredError', train_MSE)
-            # mlflow.log_metric('test_MeanSquaredError', test_MSE)
-
-            # mlflow.log_metric('train_RootMeanSquaredError', train_RMSE)
-            # mlflow.log_metric('test_RootMeanSquaredError', test_RMSE)
 
             mlflow.log_metric('train_MeanAbsolutePercentageError', train_MAPE)
             mlflow.log_metric('test_MeanAbsolutePercentageError', test_MAPE)
@@ -92,14 +78,6 @@ def decisiontree():
 
         train_MAE = mean_absolute_error(y_train_pred, y_train)
         test_MAE = mean_absolute_error(y_test_pred, y_test)
-
-        #   train_MSE = mean_squared_error(y_train_pred, y_train)
-        #   test_MSE = mean_squared_error(y_test_pred, y_test)
-
-        # Train_RMSE = mean_squared_error(y_train_pred, y_train)
-        # Test_RMSE = mean_squared_error(y_test_pred, y_test)
-        # train_RMSE = sqrt(Train_RMSE)
-        # test_RMSE = sqrt(Test_RMSE)
         
         train_MAPE = mean_absolute_percentage_error(y_train_pred, y_train)
         test_MAPE = mean_absolute_percentage_error(y_test_pred, y_test)
@@ -110,12 +88,6 @@ def decisiontree():
 
             mlflow.log_metric('train_MeanAbsoluteError', train_MAE)
             mlflow.log_metric('test_MeanAbsoluteError', test_MAE)
-
-            # mlflow.log_metric('train_MeanSquaredError', train_MSE)
-            # mlflow.log_metric('test_MeanSquaredError', test_MSE)
-
-            # mlflow.log_metric('train_RootMeanSquaredError', train_RMSE)
-            # mlflow.log_metric('test_RootMeanSquaredError', test_RMSE)
 
             mlflow.log_metric('train_MeanAbsolutePercentageError', train_MAPE)
             mlflow.log_metric('test_MeanAbsolutePercentageError', test_MAPE)
@@ -138,14 +110,6 @@ def knn():
 
         train_MAE = mean_absolute_error(y_train_pred, y_train)
         test_MAE = mean_absolute_error(y_test_pred, y_test)
-
-        #   train_MSE = mean_squared_error(y_train_pred, y_train)
-        #   test_MSE = mean_squared_error(y_test_pred, y_test)
-
-        # Train_RMSE = mean_squared_error(y_train_pred, y_train)
-        # Test_RMSE = mean_squared_error(y_test_pred, y_test)
-        # train_RMSE = sqrt(Train_RMSE)
-        # test_RMSE = sqrt(Test_RMSE)
         
         train_MAPE = mean_absolute_percentage_error(y_train_pred, y_train)
         test_MAPE = mean_absolute_percentage_error(y_test_pred, y_test)
@@ -155,12 +119,6 @@ def knn():
 
             mlflow.log_metric('train_MeanAbsoluteError', train_MAE)
             mlflow.log_metric('test_MeanAbsoluteError', test_MAE)
-
-            # mlflow.log_metric('train_MeanSquaredError', train_MSE)
-            # mlflow.log_metric('test_MeanSquaredError', test_MSE)
-
-            # mlflow.log_metric('train_RootMeanSquaredError', train_RMSE)
-            # mlflow.log_metric('test_RootMeanSquaredError', test_RMSE)
 
             mlflow.log_metric('train_MeanAbsolutePercentageError', train_MAPE)
             mlflow.log_metric('test_MeanAbsolutePercentageError', test_MAPE)
@@ -192,9 +150,6 @@ def randomforest_class():
 
         y_train_pred = model_rf.predict(X_train)
         y_test_pred = model_rf.predict(X_test)
-
-        # res = pd.DataFrame(data = list(zip(y_train,y_train_pred,y_test,y_test_pred)), columns = ['y_train','y_train_pred','y_test','y_test_pred'])
-        # print(res)
 
         train_accuracy = accuracy_score(Y_train, y_train_pred)
         test_accuracy = accuracy_score(Y_test, y_test_pred)
@@ -237,9 +192,6 @@ def decisiontree_class():
 
         y_train_pred = model_dt.predict(X_train)
         y_test_pred = model_dt.predict(X_test)
-
-        # res = pd.DataFrame(data = list(zip(y_train,y_train_pred,y_test,y_test_pred)), columns = ['y_train','y_train_pred','y_test','y_test_pred'])
-        # print(res)
 
         train_accuracy = accuracy_score(Y_train, y_train_pred)
         test_accuracy = accuracy_score(Y_test, y_test_pred)
